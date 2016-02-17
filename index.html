@@ -51,7 +51,7 @@
 <h2>
 <a id="plotting-pickups" class="anchor" href="#plotting-pickups" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Plotting Pickups</h2>
 
-<p>Simplest thing to do is to plot each pickup location on a map</p>
+<p>The simplest thing to do is just plot each pickup location on a map</p>
 
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/map_of_newyork.png" width="800"></p>
@@ -62,13 +62,13 @@
 <h2>
 <a id="getting-around" class="anchor" href="#getting-around" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Around</h2>
 
-<p>As each data point has the pickup/dropoff time and trip distance we can calculate the average speed. Grouping by the hour of the day gives an idea of when are the busiest times to be on the road. We have also plotted the total number of pickups during that hour; this should be inversely correlated with average speed. </p>
+<p>As each data point has the pickup/dropoff time and trip distance we can calculate the average speed. Grouping by the hour of the day gives an idea of when the busiest times to be on the road are. We have also plotted the total number of pickups during that hour; this should be inversely correlated with average speed. </p>
 
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/GettingAroundNewYork.png" alt="Getting Around"></p>
 </blockquote>
 
-<p>We can see how this trend plays out on a day to day basis by grouping the data by weekday</p>
+<p>We can see how this trend plays out on a day to day basis by grouping the data by weekday. As one might expect the average speed is highest, and number of pickups lowest on a Sunday. </p>
 
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/GettingAroundNewYorkALL.png" alt="Getting Around All"></p>
@@ -83,19 +83,19 @@
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/AverageSpeedtoAirport.png" alt="Airport Speed"></p>
 </blockquote>
 
-<p>It is not surprising to see that the average speed to/from an airport is much higher than the overall average speed. Again we can group this data by weekday to see how the trend behaves on a day to day basis</p>
+<p>It is not surprising to see that the average speed to/from an airport is much higher than the overall average speed. Also we can see that the worst time of day to make a trip to either airport is between 3pm and 5pm. Again we can group this data by weekday to see how the trend behaves on a day to day basis</p>
 
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/AverageSpeedtoAirportALL.png" alt="Airport Speed All"></p>
 </blockquote>
 
-<p>I also plotted the number of trips to and from each airport </p>
+<p>We have also plotted the number of trips to and from each airport; giving an indication of how busy the airport will be when a passenger gets there. </p>
 
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/NumberofAirportPickups.png" alt="Num to Airport"></p>
 </blockquote>
 
-<p>It is immediately obvious that JFK is a much more popular airport than Newark, at least for people living in NYC. Grouping by weekday again we have</p>
+<p>It is immediately obvious that JFK is a much more popular airport than Newark, at least for people living in NYC. Also we see that both airports are likely to be most congested around 3pm. Grouping by weekday again we see, somewhat surprisingly that Sunday is the most popular day to fly.</p>
 
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/NumberofAirportPickupsALL.png" alt="Num to Airport All"></p>
@@ -111,6 +111,8 @@ and how often they share cabs. </p>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/newyorkers.png" alt="newyorkers"></p>
 </blockquote>
 
+<p>Of particular interest is that, on average, Newyorkers are only willing to travel 3 miles, something to consider if you are planning on opening a business. </p>
+
 <h1>
 <a id="popularity-of-restaurants-and-nightlife-venues" class="anchor" href="#popularity-of-restaurants-and-nightlife-venues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Popularity of Restaurants and Nightlife Venues</h1>
 
@@ -119,13 +121,13 @@ and how often they share cabs. </p>
 <h2>
 <a id="restaurants" class="anchor" href="#restaurants" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Restaurants</h2>
 
-<p>Using the Yelp Api, I obtained the top 40 restaurants in NYC and plotted them on a map, not surprisingly many of them are in Manhattan</p>
+<p>Using the Yelp Api, we obtained the top 40 restaurants in NYC and plotted them on a map, not surprisingly many of are in Manhattan</p>
 
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/RestMap2.png" height="600"></p>
 </blockquote>
 
-<p>For each restaurant I obtained its address as a latitude and longitude and then looked at the number of dropoffs within a 15 meter radius of that address. This should give some measure of the popularity of the locale. The figure below has the restaurants ordered from left to right by popularity on Yelp.</p>
+<p>For each restaurant we obtained its address as a latitude and longitude and then looked at the number of dropoffs within a 15 meter radius of that address. This should give some measure of the popularity of the locale. The figure below has the restaurants ordered from left to right by popularity on Yelp.</p>
 
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/rest.png" alt="rest graph"></p>
@@ -137,10 +139,12 @@ and how often they share cabs. </p>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/RestMapSize2.png" height="600"></p>
 </blockquote>
 
+<p>So, if you are looking for a quite restaurant for date night on Friday, pick one of the venues with the smallest number of dropoffs.</p>
+
 <h2>
 <a id="nightlife" class="anchor" href="#nightlife" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Nightlife</h2>
 
-<p>I also pulled the top 40 venues categorized as "Nightlife" (I wanted to know where I should go on a Friday night) and found</p>
+<p>On the other hand suppose you want to know the best places to go on a Friday night to meet new people. To answer this question we pulled the top 40 venues categorized as "Nightlife" and found</p>
 
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/NightlifeMap2.png" height="600"></p>
@@ -157,6 +161,8 @@ and how often they share cabs. </p>
 <blockquote>
 <p><img src="https://raw.githubusercontent.com/TrevorRempel/Data-Incubator/master/Figures/NightlifeMapSize2.png" height="600"></p>
 </blockquote>
+
+<p>So, if you want to meet people on a Friday night head over to "The Duplex" or "The 55 Bar"!</p>
 
 <h1>
 <a id="future-directions" class="anchor" href="#future-directions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Future Directions</h1>
